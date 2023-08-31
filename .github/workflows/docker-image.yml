@@ -7,7 +7,7 @@ on:
 
 jobs:
   dotnet_pack_release_job:
-    uses: baoduy/ShareWorkflows/github/docker-publish.yaml@main
+    uses: baoduy/ShareWorkflows/.github/workflows/docker-publish.yaml@main
     with:
       dockerFile: 'toolbox.dockerfile'
       imageName: 'baoduy2412/toolbox'
