@@ -3,7 +3,7 @@ name: Toolbox-Docker
 on:
   push:
     branches:
-      - '**'
+      - 'main'
 
 jobs:
   dotnet_pack_release_job:
