@@ -1,0 +1,16 @@
+name: Toolbox-Docker
+
+on:
+  push:
+    branches:
+      - '**'
+
+jobs:
+  dotnet_pack_release_job:
+    uses: baoduy/ShareWorkflows/github/docker-publish.yaml@main
+    with:
+      dockerFile: 'toolbox.dockerfile'
+      imageName: 'baoduy2412/toolbox'
+    secrets:
+      DOCKER_USERNAME: baoduy2412
+      DOCKER_TOKEN: ${{ secrets.DOCKER_TOKEN }}
